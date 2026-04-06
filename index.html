@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PChome 24h購物 - 登入</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <button type="button" class="logo">
+                <span class="logo-icon">24</span>
+                <span class="logo-text">PChome 24h購物</span>
+            </button>
+            <button type="button" class="home-link">回首頁</button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="login-card">
+            <h1 class="login-title">歡迎登入</h1>
+            <p class="signup-prompt">
+                沒有 PChome 24h購物帳號？<button type="button" class="signup-link">立即註冊</button>
+            </p>
+
+            <form id="loginForm" class="login-form">
+                <input 
+                    type="text" 
+                    id="emailOrPhone" 
+                    placeholder="手機號碼或 Email" 
+                    class="input-field"
+                >
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberAccount" name="rememberAccount" checked>
+                        <span>記住帳號</span>
+                    </label>
+                    <button type="button" class="forgot-password-link">忘記密碼</button>
+                </div>
+
+                <button type="submit" class="continue-btn">繼續</button>
+            </form>
+
+            <div class="legal-notice">
+                <p>
+                    登入帳號，即表示您已同意並接受 PChome 之
+                    <button type="button" class="legal-link">會員條款</button>
+                    與
+                    <button type="button" class="legal-link">客戶隱私條款</button>
+                </p>
+            </div>
+
+            <div class="divider-section">
+                <span class="divider-text">使用以下帳號快速登入</span>
+            </div>
+
+            <div class="social-login">
+                <button type="button" class="social-btn">
+                    <img src="images/facebook.svg" alt="Facebook" class="social-icon">
+                    <span>Facebook</span>
+                </button>
+                <button type="button" class="social-btn">
+                    <img src="images/google.svg" alt="Google" class="social-icon">
+                    <span>Google</span>
+                </button>
+                <button type="button" class="social-btn">
+                    <img src="images/apple.svg" alt="Apple" class="social-icon">
+                    <span>Apple</span>
+                </button>
+            </div>
+
+            <div class="footer-link">
+                <button type="button" class="other-account-link">使用其他 PChome 帳號登入</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
