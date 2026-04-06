@@ -1,3 +1,4 @@
+/* ========== CSS 變數和全局設定 ========== */
 :root {
     --pc-red: #e62411;
     --pc-red-hover: #cc200f;
@@ -8,6 +9,7 @@
     --radius-main: 8px;
 }
 
+/* ========== 全局基礎樣式 ========== */
 * {
     box-sizing: border-box;
     font-family: "Microsoft JhengHei", sans-serif;
@@ -21,7 +23,7 @@ body {
     min-height: 100vh;
 }
 
-/* --- 按鈕重置共用樣式 --- */
+/* ========== 按鈕重置共用樣式 ========== */
 .logo, .home-link, .signup-link, .forgot-password-link, .legal-link, .other-account-link {
     border: none;
     background: none;
@@ -29,7 +31,7 @@ body {
     padding: 0;
 }
 
-/* --- Header --- */
+/* ========== Header 樣式 ========== */
 .header {
     background: #fff;
     padding: 10px 20px;
@@ -69,7 +71,7 @@ body {
     font-size: 14px;
 }
 
-/* --- Main Content --- */
+/* ========== 主容器與登入卡片 ========== */
 .main-container {
     flex: 1;
     display: flex;
@@ -110,7 +112,7 @@ body {
     font-size: 14px;
 }
 
-/* --- Form Elements --- */
+/* ========== 表單元素樣式 ========== */
 .input-field {
     width: 100%;
     padding: 12px;
@@ -179,7 +181,7 @@ body {
     transform: translateY(1px);
 }
 
-/* --- Social Login & Legal --- */
+/* ========== 法律聲明與社交登入 ========== */
 .legal-notice {
     font-size: 12px;
     color: #999;
