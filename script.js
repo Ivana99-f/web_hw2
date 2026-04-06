@@ -1,23 +1,36 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('loginForm');
-    const input = document.getElementById('emailOrPhone');
+document.addEventListener('DOMContentLoaded', function() {
+    var loginForm = document.getElementById('loginForm');
+    var loginInput = document.getElementById('emailOrPhone');
 
-    form.addEventListener('submit', (e) => {
-        const val = input.value.trim();
-        const isValid = val.includes('@') || (/^\d+$/.test(val) && val.length >= 10);
 
-        if (!val || !isValid) {
-            e.preventDefault();
-            input.classList.add('error');
-            input.setCustomValidity(val ? '請輸入有效的手機號碼或 Email' : '請填寫這個欄位。');
-            input.reportValidity();
+    function checkValidity(value) {
+        var isEmail = value.includes('@');
+        var isPhone = /^\d+$/.test(value) && value.length >= 10;
+        return isEmail || isPhone;
+    }
+
+    loginForm.addEventListener('submit', function(event) {
+        var value = loginInput.value.trim();
+
+        if (!value || !checkValidity(value)) {
+            event.preventDefault();
+            
+            loginInput.classList.add('error');
+            
+            var errorMsg = value ? '請輸入有效的手機號碼或 Email' : '請填寫這個欄位。';
+            
+            loginInput.setCustomValidity(errorMsg);
+            loginInput.reportValidity();
         } else {
-            input.setCustomValidity(''); 
+
+            loginInput.setCustomValidity('');
+            console.log('驗證通過，提交內容：', value);
         }
     });
 
-    input.addEventListener('input', () => {
-        input.classList.remove('error');
-        input.setCustomValidity('');
+  
+    loginInput.addEventListener('input', function() {
+        loginInput.classList.remove('error');
+        loginInput.setCustomValidity('');
     });
 });
