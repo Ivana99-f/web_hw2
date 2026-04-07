@@ -66,7 +66,7 @@ body {
 }
 
 .home-link {
-    color: var(--pc-blue);
+    color: #999;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
@@ -88,7 +88,6 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     width: 100%;
     max-width: 400px;
-    /* 移除了多餘的 flex column */
 }
 
 .login-title {

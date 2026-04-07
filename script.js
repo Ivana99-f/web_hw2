@@ -1,4 +1,3 @@
-/* ========== 表單驗證和事件監聽 ========== */
 document.addEventListener('DOMContentLoaded', function() {
     /* ========== 取得 DOM 元素 ========== */
     var loginForm = document.getElementById('loginForm');
@@ -7,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     /* ========== 驗證函式 ========== */
     function checkValidity(value) {
         var isEmail = value.includes('@');
-        var isPhone = /^\d+$/.test(value) && value.length >= 10;
+        var isPhone = /^\d+$/.test(value) && value.length === 10;
         return isEmail || isPhone;
     }
 
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             loginInput.classList.add('error');
             
-            var errorMsg = value ? '請輸入有效的手機號碼或 Email' : '請填寫這個欄位。';
+            var errorMsg = value ? '手機號碼 或 Email格式有誤' : '請填寫這個欄位。';
             
             loginInput.setCustomValidity(errorMsg);
             loginInput.reportValidity();
